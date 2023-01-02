@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: SaleEquipmentScreen(),
-      initialRoute: AppRouteName.signin,
+      initialRoute: AppRouteName.home,
       onGenerateRoute: AppRoute.generate,
     );
   }

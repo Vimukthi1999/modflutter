@@ -52,11 +52,16 @@ Widget appClickbleTxt(String txt, String clicktxt, Function clickEvent) {
 }
 
 Widget appHomeCardTxt(String txt) {
-  return Text(txt);
+  return Text(
+    txt,
+    textAlign: TextAlign.center,
+  );
 }
 
 Widget appBarTxt(String txt) {
-  return Text(txt);
+  return Text(
+    txt,
+  );
 }
 
 Widget drawerTitleTxt(String txt) {
