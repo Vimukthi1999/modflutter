@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'views/sale_screens/sale_equipment_screen.dart';
-import 'views/search_advertisement_screen.dart';
+import 'route/app_route_names.dart';
+import 'route/routes.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SaleEquipmentScreen(),
+      // home: SaleEquipmentScreen(),
+      initialRoute: AppRouteName.signin,
+      onGenerateRoute: AppRoute.generate,
     );
   }
 }

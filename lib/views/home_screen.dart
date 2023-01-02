@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:modflutterapp/res/image_path/app_imgpaths.dart';
 import 'package:modflutterapp/res/widgets/app_drawer.dart';
+import 'package:modflutterapp/route/app_route_names.dart';
 
 import '../res/widgets/app_custom_text_styles.dart';
 
@@ -41,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Widget> caerButtonList = [
       SizedBox(height: 10,),
       adCardView(context, '', AppImgPath.myad_main, 'My Advertisement'),
-      adCardView(context, '', AppImgPath.search_main, 'Search Advertisement'),
+      adCardView(context, AppRouteName.searchads, AppImgPath.search_main, 'Search Advertisement'),
       adCardView(context, '', AppImgPath.purchase_main, 'Purchase Advertisement'),
       adCardView(context, '', AppImgPath.sell_main, 'Sales Advertisement'),
       adCardView(context, '', AppImgPath.aboutus_main, 'About Us'),
@@ -53,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
-
           SliverAppBar(
             title: const Text('App Bar Title'),
             leading: IconButton(
@@ -91,11 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-
-          // SliverToBoxAdapter(
-          //   child: adCardView('', AppImgPath.search_main, '-----------')
-          //
-          // ),
 
           SliverMasonryGrid.count(
               childCount: 7,

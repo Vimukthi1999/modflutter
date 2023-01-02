@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:modflutterapp/route/app_route_names.dart';
 
 import '../res/widgets/app_custom_text_styles.dart';
 import '../res/widgets/app_txtfiled_decoration.dart';
@@ -26,7 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed(AppRouteName.home);
+        },
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
