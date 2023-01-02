@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 
 import '../res/widgets/app_custom_text_styles.dart';
 
-
 class MyAiBookingScreen extends StatefulWidget {
   const MyAiBookingScreen({Key? key}) : super(key: key);
 
@@ -15,14 +14,17 @@ class MyAiBookingScreen extends StatefulWidget {
 
 class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
   // variables
-  DateTime? selectedFromDate, selectedToDate;
+  // DateTime? selectedFromDate, selectedToDate;
+  String selectedFromDate = '-select date-', selectedToDate = '-select date-';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // fromDate();
-          setState(() {});
+
+          // setState(() {});
         },
         child: const Icon(Icons.add),
       ),
@@ -58,24 +60,27 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
                   Row(
                     children: [
                       Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          appfTxt('From'),
-                          customDatePicker(fromDate, getFromDateText),
-                        ],
-                      )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            appfTxt('From'),
+                            customDatePicker(selectedFromDate, 1),
+                          ],
+                        ),
+                      ),
                       const SizedBox(
                         width: 10,
                       ),
                       Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          appfTxt('To'),
-                          customDatePicker(toDate, getToDateText),
-                        ],
-                      )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            appfTxt('To'),
+                            // customDatePicker(toDate),
+                            customDatePicker(selectedToDate, 2),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -88,63 +93,44 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
   }
 
   // use for get from date
-  Future<void> fromDate(BuildContext context) async {
+  void fromDate() async {
     DateTime initDate = DateTime.now();
     final DateTime? pickeddate = await showDatePicker(
       context: context,
-      initialDate: selectedFromDate ?? initDate,
+      initialDate: initDate,
       firstDate: DateTime.now().subtract(const Duration(days: 0)),
       lastDate: DateTime(DateTime.now().year + 5),
     );
 
-    // if (pickeddate != null) {
-    //   setState((){
-    //     selectedFromDate = DateFormat('dd/MM/yyyy').format(pickeddate);
-    //     print(selectedFromDate);
-    //   });
-    // }
-    if (pickeddate == null) return;
-
-    setState(() => selectedFromDate = pickeddate);
-  }
-// get text of select date button
-  String getFromDateText() {
-    if (selectedFromDate == null) {
-      return 'Select Date';
-    } else {
-      return DateFormat('dd/MM/yyyy').format(selectedFromDate!);
+    if (pickeddate != null) {
+      setState(() {
+        selectedFromDate = DateFormat('dd/MM/yyyy').format(pickeddate);
+      });
     }
+    // if (pickeddate == null) return;
+
+    // setState(() => selectedFromDate = pickeddate);
   }
 
   // use for get to date
-  Future<void> toDate(BuildContext context) async {
+  void toDate() async {
     DateTime initDate = DateTime.now();
     final DateTime? pickeddate = await showDatePicker(
       context: context,
-      initialDate: selectedToDate ?? initDate,
+      initialDate: initDate,
       firstDate: DateTime.now().subtract(const Duration(days: 0)),
       lastDate: DateTime(DateTime.now().year + 5),
     );
-    if (pickeddate == null) return;
 
-    setState(() => selectedToDate = pickeddate);
-    // if (pickeddate != null) {
-    //   setState((){
-    //     selectedToDate = '${pickeddate.year}-${pickeddate.month}-${pickeddate.day}';
-    //     print(selectedToDate);
-    //   });
-    // }
-  }
-  // get text of select date button
-  String getToDateText() {
-    if (selectedToDate == null) {
-      return 'Select Date';
-    } else {
-      return DateFormat('dd/MM/yyyy').format(selectedToDate!);
+    if (pickeddate != null) {
+      setState(() {
+        selectedToDate = DateFormat('yyyy/MM/dd').format(pickeddate);
+      });
     }
   }
 
-  Widget customDatePicker(Function functionDropDown, Function functionText) {
+  Widget customDatePicker(String dd, int which) {
+    // fu = toDate();
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
@@ -158,25 +144,29 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
           InkWell(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Text(functionText()),
+              child: Text(dd),
             ),
             onTap: () {
               // datePickFunction();
               // fromDate();
-
             },
           ),
+
+          // dt,
           IconButton(
             icon: const Icon(Icons.calendar_today, color: Colors.black),
             tooltip: 'Tap to open date picker',
             onPressed: () {
-              // datePickFunction();
-              // fromDate();
-              // setState(() {
-              setState(() {
-                functionDropDown;
-              });
-              // });
+              switch (which) {
+                case 1:
+                  fromDate();
+                  break;
+                case 2:
+                  toDate();
+
+                  break;
+                default:
+              }
             },
           ),
         ],
