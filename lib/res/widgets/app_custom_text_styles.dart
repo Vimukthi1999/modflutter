@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 /// required label
@@ -29,6 +30,24 @@ Widget appfTxt(String txt) {
         style: const TextStyle(color: Colors.black54),
       ),
     ),
+  );
+}
+
+Widget appClickbleTxt(String txt, String clicktxt, Function clickEvent) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 5, top: 5),
+    child: RichText(
+        text: TextSpan(children: [
+      TextSpan(
+        text: txt,
+        style: const TextStyle(color: Colors.black54),
+      ),
+      TextSpan(
+        text: clicktxt,
+        style: const TextStyle(color: Colors.black54),
+        recognizer: TapGestureRecognizer()..onTap = clickEvent(),
+      ),
+    ])),
   );
 }
 
