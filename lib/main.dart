@@ -26,9 +26,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const HomeScreen(),
-      // home: MyWidget(),
-      // home: PurchaseSilageScreen(),
       home: SaleEquipmentScreen(),
     );
   }
