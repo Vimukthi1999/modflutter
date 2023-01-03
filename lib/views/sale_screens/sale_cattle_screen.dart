@@ -48,7 +48,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -63,7 +63,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// breed & gender
               Row(
                 children: [
@@ -74,7 +74,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -84,7 +84,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// no of cattle
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,7 +98,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// price & weight
               Row(
                 children: [
@@ -114,7 +114,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                       )
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -129,7 +129,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// age(years) & age(months)
               Row(
                 children: [
@@ -145,7 +145,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                       )
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -160,7 +160,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// select image
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -174,7 +174,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// additional information
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,7 +190,7 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// link label
               Text.rich(
                 TextSpan(
@@ -199,20 +199,20 @@ class _SaleCattleScreenState extends State<SaleCattleScreen> {
                     WidgetSpan(
                       child: InkWell(
                         onTap: (){},
-                        child: Text(' Yes',
+                        child: const Text(' Yes',
                           style: TextStyle(color: Colors.amber, fontSize: 18),
                         ),
                       ),)
                   ],
-                  style: TextStyle(color: Colors.black54),
+                  style: const TextStyle(color: Colors.black54),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SizedBox(
                 width: mobWidth,
                 child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Submit')
+                    child: const Text('Submit')
                 ),
               ),
             ],

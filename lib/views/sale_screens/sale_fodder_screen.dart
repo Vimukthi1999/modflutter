@@ -50,7 +50,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -65,7 +65,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// district & DS division
               Row(
                 children: [
@@ -76,7 +76,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -86,7 +86,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// fodder type & quantity
               Row(
                 children: [
@@ -97,7 +97,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -112,7 +112,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// unit price
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +126,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// harvested date & expected date
               Row(
                 children: [
@@ -140,7 +140,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                       )
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -153,7 +153,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// check boxes
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,7 +176,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                             ],
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: Row(
                             children: [
@@ -195,7 +195,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                       )
                     ],
                   ),
-                  SizedBox(height: 5,),
+                  const SizedBox(height: 5,),
                   Row(
                     children: [
                       Expanded(
@@ -214,7 +214,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                             ],
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: Row(
                             children: [
@@ -235,7 +235,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// select image
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -249,7 +249,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// additional information
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -265,7 +265,7 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// link label
               Text.rich(
                 TextSpan(
@@ -274,20 +274,20 @@ class _SaleFodderScreenState extends State<SaleFodderScreen> {
                     WidgetSpan(
                       child: InkWell(
                         onTap: (){},
-                        child: Text(' Yes',
+                        child: const Text(' Yes',
                           style: TextStyle(color: Colors.amber, fontSize: 18),
                         ),
                       ),)
                   ],
-                  style: TextStyle(color: Colors.black54),
+                  style: const TextStyle(color: Colors.black54),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SizedBox(
                 width: mobWidth,
                 child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Submit')
+                    child: const Text('Submit')
                 ),
               ),
             ],

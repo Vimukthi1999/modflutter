@@ -53,7 +53,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,7 +68,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// other category
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   customDropDowns('- please select -', (){})
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// brand name
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +91,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// item description & unit
               Row(
                 children: [
@@ -107,7 +107,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                       )
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -122,7 +122,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// no of units & unit price
               Row(
                 children: [
@@ -138,7 +138,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                       )
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -153,7 +153,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// select image
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -167,7 +167,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// additional information
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -183,7 +183,7 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// link label
               Text.rich(
                 TextSpan(
@@ -192,20 +192,20 @@ class _SaleEquipmentScreenState extends State<SaleEquipmentScreen> {
                     WidgetSpan(
                       child: InkWell(
                         onTap: (){},
-                        child: Text(' Yes',
+                        child: const Text(' Yes',
                           style: TextStyle(color: Colors.amber, fontSize: 18),
                         ),
                       ),)
                   ],
-                  style: TextStyle(color: Colors.black54),
+                  style: const TextStyle(color: Colors.black54),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SizedBox(
                 width: mobWidth,
                 child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Submit')
+                    child: const Text('Submit')
                 ),
               ),
             ],

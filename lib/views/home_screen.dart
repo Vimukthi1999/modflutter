@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:modflutterapp/res/image_path/app_imgpaths.dart';
 import 'package:modflutterapp/res/widgets/app_drawer.dart';
-import 'package:modflutterapp/route/app_route_names.dart';
+
 
 import '../res/widgets/app_custom_text_styles.dart';
+import '../utils/route/app_route_names.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return Scaffold(
-      endDrawer: appDrawer(),
+      endDrawer: appDrawer(context),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
