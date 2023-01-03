@@ -272,7 +272,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 style: BorderStyle.solid,
                               ),
                             ),
-                            child: const Center(child: const Text('23.786863')),
+                            child: const Center(child: Text('23.786863')),
                           ),
                         ),
                       ],
@@ -397,7 +397,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height / 2,
               child: ListView.builder(
                 shrinkWrap: true,

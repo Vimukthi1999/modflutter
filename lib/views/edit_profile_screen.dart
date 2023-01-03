@@ -103,7 +103,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                       customDropDowns('select id type', () {}),
                     ],
                   )),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -229,18 +229,18 @@ class _EditProfileViewState extends State<EditProfileView> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 children: [
                   Expanded(
                       child: OutlinedButton(
                           onPressed: () {},
-                          child: Center(child: Text('Show Loacation')))),
-                  SizedBox(width: 10),
+                          child: const Center(child: Text('Show Loacation')))),
+                  const SizedBox(width: 10),
                   Expanded(
                       child: OutlinedButton(
                           onPressed: () {},
-                          child: Center(child: Text('Update')))),
+                          child: const Center(child: Text('Update')))),
                 ],
               )
             ],

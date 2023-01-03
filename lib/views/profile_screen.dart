@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class Profile_screen extends StatefulWidget {
-  const Profile_screen({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<Profile_screen> createState() => _Profile_screenState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _Profile_screenState extends State<Profile_screen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          String regNo = 'USR00022';
           profileView(context);
         },
         child: const Icon(Icons.add),
@@ -70,7 +67,7 @@ class _Profile_screenState extends State<Profile_screen> {
                 ),
                 const SizedBox(height: 8),
                 Row(
-                  children: const [Text('981690370v ' + ' | ' + ' Male')],
+                  children: const [Text('981690370v  |  Male')],
                 ),
                 const SizedBox(height: 20),
                 Row(

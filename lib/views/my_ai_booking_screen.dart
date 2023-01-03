@@ -1,27 +1,29 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../res/widgets/app_custom_text_styles.dart';
 
-
-class MyAiBooking extends StatefulWidget {
-  const MyAiBooking({Key? key}) : super(key: key);
+class MyAiBookingScreen extends StatefulWidget {
+  const MyAiBookingScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyAiBooking> createState() => _MyAiBookingState();
+  State<MyAiBookingScreen> createState() => _MyAiBookingScreenState();
 }
 
-class _MyAiBookingState extends State<MyAiBooking> {
+class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
   // variables
-  String? pickdate;
+  // DateTime? selectedFromDate, selectedToDate;
+  String selectedFromDate = '-select date-', selectedToDate = '-select date-';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          fromDate();
-          setState(() {});
+          // fromDate();
+
+          // setState(() {});
         },
         child: const Icon(Icons.add),
       ),
@@ -44,7 +46,7 @@ class _MyAiBookingState extends State<MyAiBooking> {
                   style: Theme.of(context).textTheme.headline3),
               Text('Plase sign in to enter in to app',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,24 +59,27 @@ class _MyAiBookingState extends State<MyAiBooking> {
                   Row(
                     children: [
                       Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          appfTxt('From'),
-                          customDatePicker(pickdate),
-                        ],
-                      )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            appfTxt('From'),
+                            customDatePicker(selectedFromDate, 1),
+                          ],
+                        ),
+                      ),
                       const SizedBox(
                         width: 10,
                       ),
-                      // Expanded(
-                      //     child: Column(
-                      //   crossAxisAlignment: CrossAxisAlignment.start,
-                      //   children: [
-                      //     appfTxt('To'),
-                      //     customDatePicker(fromDate),
-                      //   ],
-                      // )),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            appfTxt('To'),
+                            // customDatePicker(toDate),
+                            customDatePicker(selectedToDate, 2),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -87,7 +92,7 @@ class _MyAiBookingState extends State<MyAiBooking> {
   }
 
   // use for get from date
-  Future<String?> fromDate() async {
+  void fromDate() async {
     DateTime initDate = DateTime.now();
     final DateTime? pickeddate = await showDatePicker(
       context: context,
@@ -97,14 +102,30 @@ class _MyAiBookingState extends State<MyAiBooking> {
     );
 
     if (pickeddate != null) {
-      pickdate = '${pickeddate.year}-${pickeddate.month}-${pickeddate.day}';
-      log(pickdate.toString());
-      return pickdate;
+      setState(() {
+        selectedFromDate = DateFormat('dd/MM/yyyy').format(pickeddate);
+      });
     }
-    return null;
   }
 
-  Widget customDatePicker(String? date) {
+  // use for get to date
+  void toDate() async {
+    DateTime initDate = DateTime.now();
+    final DateTime? pickeddate = await showDatePicker(
+      context: context,
+      initialDate: initDate,
+      firstDate: DateTime.now().subtract(const Duration(days: 0)),
+      lastDate: DateTime(DateTime.now().year + 5),
+    );
+
+    if (pickeddate != null) {
+      setState(() {
+        selectedToDate = DateFormat('yyyy/MM/dd').format(pickeddate);
+      });
+    }
+  }
+
+  Widget customDatePicker(String dd, int which) {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
@@ -118,30 +139,29 @@ class _MyAiBookingState extends State<MyAiBooking> {
           InkWell(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Text(
-                  date ??
-                      '${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}',
-                  // fromDate();
-                  textAlign: TextAlign.right,
-                  style: const TextStyle(color: Colors.black, fontSize: 15)),
+              child: Text(dd),
             ),
             onTap: () {
               // datePickFunction();
               // fromDate();
-              // setState(() {
-
-              // });
             },
           ),
+
+          // dt,
           IconButton(
             icon: const Icon(Icons.calendar_today, color: Colors.black),
             tooltip: 'Tap to open date picker',
             onPressed: () {
-              // datePickFunction();
-              // fromDate();
-              // setState(() {
+              switch (which) {
+                case 1:
+                  fromDate();
+                  break;
+                case 2:
+                  toDate();
 
-              // });
+                  break;
+                default:
+              }
             },
           ),
         ],

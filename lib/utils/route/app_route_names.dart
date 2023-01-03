@@ -25,4 +25,7 @@ class AppRouteName {
   static const myaibooking = '/myaibooking';
   static const aboutus = '/aboutus';
 
+  static const pdcheck = '/pdcheck';
+  static const tem = '/tem';
+
 }

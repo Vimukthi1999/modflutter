@@ -53,7 +53,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                       customDropDowns('- please select -', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,7 +68,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// forage type
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   customDropDowns('- please select -', (){})
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// item details
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,9 +85,9 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   Row(
                     children: [
                       Expanded(child: appfReqTxt('Package')),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(child: appfReqTxt('Quantity (kg)')),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(child: appfReqTxt('Price Per (kg)')),
                     ],
                   ),
@@ -109,20 +109,20 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                             ],
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBarrelQty,
                             decoration: appTxtfiledDecoration('quantity (kg)'),
                             onSaved: (value) {
                               },
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBarrelPrice,
                             decoration: appTxtfiledDecoration('price per (kg)'),
                             onSaved: (value) {
@@ -131,7 +131,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5,),
+                  const SizedBox(height: 5,),
                   Row(
                     children: [
                       Expanded(
@@ -150,20 +150,20 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                             ],
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBaleQty,
                             decoration: appTxtfiledDecoration('quantity (kg)'),
                             onSaved: (value) {
                               },
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBalePrice,
                             decoration: appTxtfiledDecoration('price per (kg)'),
                             onSaved: (value) {
@@ -172,7 +172,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5,),
+                  const SizedBox(height: 5,),
                   Row(
                     children: [
                       Expanded(
@@ -191,20 +191,20 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                             ],
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBagsQty,
                             decoration: appTxtfiledDecoration('quantity (kg)'),
                             onSaved: (value) {
                               },
                           )
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                           child: TextFormField(
-                            style: TextStyle(fontSize: 13),
+                            style: const TextStyle(fontSize: 13),
                             controller: _controllerBagsPrice,
                             decoration: appTxtfiledDecoration('price per (kg)'),
                             onSaved: (value) {
@@ -215,7 +215,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// select image
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -229,7 +229,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// additional information
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,7 +245,7 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// link label
               Text.rich(
                 TextSpan(
@@ -254,20 +254,20 @@ class _SaleSilageScreenState extends State<SaleSilageScreen> {
                     WidgetSpan(
                         child: InkWell(
                           onTap: (){},
-                          child: Text(' Yes',
+                          child: const Text(' Yes',
                             style: TextStyle(color: Colors.amber, fontSize: 18),
                           ),
                         ),)
                   ],
-                  style: TextStyle(color: Colors.black54),
+                  style: const TextStyle(color: Colors.black54),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SizedBox(
                 width: mobWidth,
                 child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Submit')
+                    child: const Text('Submit')
                 ),
               ),
             ],

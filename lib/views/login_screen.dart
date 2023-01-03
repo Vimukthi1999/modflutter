@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
+import 'package:modflutterapp/view_models/auth_vm.dart';
+import 'package:provider/provider.dart';
 import '../res/widgets/app_custom_text_styles.dart';
 import '../res/widgets/app_txtfiled_decoration.dart';
+import '../utils/route/app_route_names.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -26,7 +26,14 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // Navigator.of(context).pushNamed(AppRouteName.home);
+
+          Provider.of<AuthVM>(context,listen: false).getOtpvm(context,{
+            'username': '766134439',
+          });
+
+        },
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
@@ -47,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Text('Login', style: Theme.of(context).textTheme.headline3),
               Text('Plase sign in to enter in to app',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Form(
                 key: _formKey,
                 child: Column(
@@ -79,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         mobileNo = val!;
                       },
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     appClickbleTxt(
                         'Dont\'t you have an account ? ', 'Register', () {}),
                   ],
@@ -91,4 +98,5 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
 }

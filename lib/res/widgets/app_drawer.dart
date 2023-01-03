@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
+import '../../utils/route/app_route_names.dart';
 import '../image_path/app_imgpaths.dart';
 import 'app_custom_text_styles.dart';
 
-Widget appDrawer() {
+Widget appDrawer(BuildContext context) {
   return Drawer(
+    width: MediaQuery.of(context).size.width-50,
     child: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -36,7 +37,7 @@ Widget appDrawer() {
                                 leading: Image.asset(AppImgPath.home),
                                 title: drawerTitleTxt("Home"),
                                 onTap: (){
-                                  //action on press
+                                  Navigator.of(context).pushNamed(AppRouteName.home);
                                 },
                               ),
                             ),
@@ -45,7 +46,7 @@ Widget appDrawer() {
                                 title: drawerTitleTxt("Search Advertisemet"),
                                 leading: Image.asset(AppImgPath.search),
                                 onTap: (){
-                                  //action on press
+                                  Navigator.of(context).pushNamed(AppRouteName.searchads);
                                 },
                               ),
                             ),
@@ -54,7 +55,7 @@ Widget appDrawer() {
                                 title: drawerTitleTxt("My Advertisemet"),
                                 leading: Image.asset(AppImgPath.myad),
                                 onTap: (){
-                                  //action on press
+                                  Navigator.of(context).pushNamed(AppRouteName.myads);
                                 },
                               ),
                             ),
@@ -62,13 +63,13 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Sales Advertisement"),
                                 leading: Image.asset(AppImgPath.sale), //add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Cattle"),
                                     leading: Image.asset(AppImgPath.cow),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.salsesadsCattle);
                                     },
                                   ),
 
@@ -76,7 +77,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Silage"),
                                     leading: Image.asset(AppImgPath.silage),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.salsesadsSilage);
                                     },
                                   ),
 
@@ -84,7 +85,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Fodder"),
                                     leading: Image.asset(AppImgPath.fodder),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.salsesadsFodder);
                                     },
                                   ),
 
@@ -92,7 +93,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Other(Equip/Feed/Etc."),
                                     leading: Image.asset(AppImgPath.equ),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.salsesadsOther);
                                     },
                                   ),
 
@@ -104,13 +105,13 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Purchase Advertisement"),
                                 leading: Image.asset(AppImgPath.buy),//add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Cattle"),
                                     leading: Image.asset(AppImgPath.cow),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.purchaseadsCattle);
                                     },
                                   ),
 
@@ -118,7 +119,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Silage"),
                                     leading: Image.asset(AppImgPath.silage),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.purchaseadsSilage);
                                     },
                                   ),
 
@@ -126,7 +127,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Fodder"),
                                     leading: Image.asset(AppImgPath.fodder),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.purchaseadsFodder);
                                     },
                                   ),
 
@@ -134,7 +135,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("Other(Equip/Feed/Etc."),
                                     leading: Image.asset(AppImgPath.equ),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.purchaseadsOther);
                                     },
                                   ),
 
@@ -146,13 +147,13 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Ai Service"),
                                 leading: Image.asset(AppImgPath.ai_adv), //add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Search AI"),
                                     leading: Image.asset(AppImgPath.search_ai),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.searchai);
                                     },
                                   ),
 
@@ -160,7 +161,7 @@ Widget appDrawer() {
                                     title: drawerTitleTxt("My AI Bookings"),
                                     leading: Image.asset(AppImgPath.my_ai),
                                     onTap: (){
-                                      //action on press
+                                      Navigator.of(context).pushNamed(AppRouteName.myaibooking);
                                     },
                                   ),
 
@@ -173,7 +174,7 @@ Widget appDrawer() {
                                 title: drawerTitleTxt("About Us"),
                                 leading: Image.asset(AppImgPath.about),
                                 onTap: (){
-                                  //action on press
+                                  Navigator.of(context).pushNamed(AppRouteName.aboutus);
                                 },
                               ),
                             ),
