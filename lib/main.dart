@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:modflutterapp/views/sub_screen/aiEp_feedback_screen.dart';
+import 'package:modflutterapp/views/sub_screen/ai_cancellation_screen.dart';
+import 'package:modflutterapp/views/sub_screen/feedback_screen.dart';
+import 'package:modflutterapp/views/tem_screen.dart';
 import 'route/app_route_names.dart';
 import 'route/routes.dart';
 
@@ -19,9 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: SaleEquipmentScreen(),
-      initialRoute: AppRouteName.home,
-      onGenerateRoute: AppRoute.generate,
+      home: TemScreen(),
+      // initialRoute: AppRouteName.home,
+      // onGenerateRoute: AppRoute.generate,
     );
   }
 }
