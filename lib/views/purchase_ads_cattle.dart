@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../res/widgets/app_custom_text_styles.dart';
 import '../res/widgets/app_txtfiled_decoration.dart';
@@ -48,7 +46,7 @@ class _PurchaseAdsCattleState extends State<PurchaseAdsCattle> {
                   style: Theme.of(context).textTheme.headline3),
               Text('Plase sign up to enter in to app',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Form(
                 key: _formKey,
                 child: Column(
@@ -136,7 +134,7 @@ class _PurchaseAdsCattleState extends State<PurchaseAdsCattle> {
                         // empNo = value!;
                       },
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     appClickbleTxt(
                         'Do you want to add another animal ? ', 'Yes', () {}),
                   ],

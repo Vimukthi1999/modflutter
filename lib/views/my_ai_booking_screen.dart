@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -47,7 +46,7 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
                   style: Theme.of(context).textTheme.headline3),
               Text('Plase sign in to enter in to app',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -107,9 +106,6 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
         selectedFromDate = DateFormat('dd/MM/yyyy').format(pickeddate);
       });
     }
-    // if (pickeddate == null) return;
-
-    // setState(() => selectedFromDate = pickeddate);
   }
 
   // use for get to date
@@ -130,7 +126,6 @@ class _MyAiBookingScreenState extends State<MyAiBookingScreen> {
   }
 
   Widget customDatePicker(String dd, int which) {
-    // fu = toDate();
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),

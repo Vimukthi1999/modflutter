@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 class AppImgPath {
   static String home = 'assets/home.png';
   static String search = 'assets/search.png';

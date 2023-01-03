@@ -35,12 +35,12 @@ class _SearchAiScreenState extends State<SearchAiScreen> {
               Text('Search AI', style: Theme.of(context).textTheme.headline3),
               Text('Plase sign in to enter in to app',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   appfTxt('Location'),
-                  customDropDowns('selete location', () {})
+                  customDropDowns('- please select -', () {})
 
                   // SizedBox(height: 20),
                   // IconButton(onPressed: () {}, icon: Icon(Icons.search))

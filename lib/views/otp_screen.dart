@@ -62,7 +62,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   style: Theme.of(context).textTheme.bodyText2),
               Text('+99*******1234',
                   style: Theme.of(context).textTheme.bodyText2),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Form(
                 key: _formKey,
                 child: Row(

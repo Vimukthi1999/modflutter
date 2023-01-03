@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
-import 'route/app_route_names.dart';
-import 'route/routes.dart';
+import 'package:modflutterapp/view_models/auth_vm.dart';
+import 'package:provider/provider.dart';
+
+import 'utils/route/app_route_names.dart';
+import 'utils/route/routes.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (create) => AuthVM()),
+        // ChangeNotifierProvider(create: (create) => DpValueViewModel()),
+        // ChangeNotifierProvider(create: (create) => FetchVM()),
+        // ChangeNotifierProvider(create: (create) => AuthViewModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,8 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: SaleEquipmentScreen(),
-      initialRoute: AppRouteName.home,
+      initialRoute: AppRouteName.signin,
       onGenerateRoute: AppRoute.generate,
     );
   }

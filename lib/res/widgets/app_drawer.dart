@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-
-import '../../route/app_route_names.dart';
+import '../../utils/route/app_route_names.dart';
 import '../image_path/app_imgpaths.dart';
 import 'app_custom_text_styles.dart';
 
-Widget appDrawer() {
+Widget appDrawer(BuildContext context) {
   return Drawer(
+    width: MediaQuery.of(context).size.width-50,
     child: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -63,7 +63,7 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Sales Advertisement"),
                                 leading: Image.asset(AppImgPath.sale), //add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Cattle"),
@@ -105,7 +105,7 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Purchase Advertisement"),
                                 leading: Image.asset(AppImgPath.buy),//add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Cattle"),
@@ -147,7 +147,7 @@ Widget appDrawer() {
                               child: ExpansionTile(
                                 title: drawerTitleTxt("Ai Service"),
                                 leading: Image.asset(AppImgPath.ai_adv), //add icon
-                                childrenPadding: EdgeInsets.only(left:60), //children padding
+                                childrenPadding: const EdgeInsets.only(left:60), //children padding
                                 children: [
                                   ListTile(
                                     title: drawerTitleTxt("Search AI"),

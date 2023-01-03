@@ -42,7 +42,7 @@ class _SearchAdvertisementScreenState extends State<SearchAdvertisementScreen> {
                       customDropDowns('seleted item name', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -52,7 +52,7 @@ class _SearchAdvertisementScreenState extends State<SearchAdvertisementScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// product & advert type
               Row(
                 children: [
@@ -63,7 +63,7 @@ class _SearchAdvertisementScreenState extends State<SearchAdvertisementScreen> {
                       customDropDowns('seleted item name', (){})
                     ],
                   )),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -73,7 +73,7 @@ class _SearchAdvertisementScreenState extends State<SearchAdvertisementScreen> {
                   )),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               /// advertisement title
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,15 +87,15 @@ class _SearchAdvertisementScreenState extends State<SearchAdvertisementScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SizedBox(
                 width: mobWidth,
                 child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Submit')
+                    child: const Text('Submit')
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               ListView.builder(
                   shrinkWrap: true,
                   itemCount: 3,
