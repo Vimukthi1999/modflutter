@@ -71,3 +71,7 @@ Widget drawerTitleTxt(String txt) {
 Widget drawerFooterTxt(String txt) {
   return Text(txt);
 }
+
+Widget contentTxt(String txt) {
+  return Text(txt);
+}
