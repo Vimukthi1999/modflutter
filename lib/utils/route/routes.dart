@@ -73,8 +73,8 @@ class AppRoute {
       case AppRouteName.pdcheck:
         return _buildRoute(const PdCheckScreen(), settings);
 
-      case AppRouteName.tem:
-        return _buildRoute(const temscreen(), settings);
+      // case AppRouteName.tem:
+      //   return _buildRoute(const temscreen(), settings);
 
       default:
         return _buildRoute(const ScreenNotFound(), settings);
